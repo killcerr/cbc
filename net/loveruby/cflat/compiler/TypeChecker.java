@@ -51,7 +51,7 @@ class TypeChecker extends Visitor {
     }
 
     private void checkParamTypes(DefinedFunction f) {
-        for (Parameter param : f.parameters()) {
+        for (Param param : f.parameters()) {
             if (isInvalidParameterType(param.type())) {
                 error(param.location(),
                         "invalid parameter type: " + param.type());

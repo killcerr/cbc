@@ -24,7 +24,7 @@ public class DefinedFunction extends Function {
         return true;
     }
 
-    public List<Parameter> parameters() {
+    public List<Param> parameters() {
         return params.parameters();
     }
 

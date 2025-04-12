@@ -21,6 +21,7 @@ class GNUAssembler implements Assembler {
         cmd.add("-o");
         cmd.add(destPath);
         cmd.add(srcPath);
+	cmd.add("--32");
         CommandUtils.invoke(cmd, errorHandler, opts.verbose);
     }
     // #@@}

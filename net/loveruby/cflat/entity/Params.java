@@ -5,19 +5,19 @@ import net.loveruby.cflat.ast.Location;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Params extends ParamSlots<Parameter>
+public class Params extends ParamSlots<Param>
         implements net.loveruby.cflat.ast.Dumpable {
-    public Params(Location loc, List<Parameter> paramDescs) {
+    public Params(Location loc, List<Param> paramDescs) {
         super(loc, paramDescs, false);
     }
 
-    public List<Parameter> parameters() {
+    public List<Param> parameters() {
         return paramDescriptors;
     }
 
     public ParamTypeRefs parametersTypeRef() {
         List<TypeRef> typerefs = new ArrayList<TypeRef>();
-        for (Parameter param : paramDescriptors) {
+        for (Param param : paramDescriptors) {
             typerefs.add(param.typeNode().typeRef());
         }
         return new ParamTypeRefs(location, typerefs, vararg);

@@ -53,7 +53,7 @@ test_06_variables() {
     assert_public comm global_int &&
     assert_public comm global_string
     assert_out "1;2;OK;NEW" ./sgvar &&
-    assert_private sgvar static_global_variable &&
+    assert_public sgvar static_global_variable &&
     assert_private sgvar static_global_string
 
     assert_out "1;2;OK;NEW" ./slvar &&

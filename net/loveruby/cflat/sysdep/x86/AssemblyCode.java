@@ -191,7 +191,8 @@ public class AssemblyCode implements net.loveruby.cflat.sysdep.AssemblyCode {
     }
 
     void _size(Symbol sym, long size) {
-        _size(sym, new Long(size).toString());
+        // _size(sym, new Long(size).toString());
+	_size(sym, Long.valueOf(size).toString());
     }
 
     void _size(Symbol sym, String size) {
